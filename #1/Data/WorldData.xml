@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+
+<World>
+	<Player name="Player1" x="320" y="240" path="TinyAdventurePack/Character/Char_one/Idle/Char_idle_down.png"
+			hp="3">
+		<Col type="box" xoff="0" yoff="0" w="32" h="64"/>
+		<!--<Col type="capsule" xoff="0" yoff="-10" w="32" h="64"/>-->
+	</Player>
+
+	<Objects>
+		<Object name="Bush" x="50" y="50" path="TinyAdventurePack/Other/Bush.png">
+			<Col type="oval" xoff="0" yoff="0" w="60" h="52"/>
+		</Object>
+		<Object name="Bush" x="150" y="350" path="TinyAdventurePack/Other/Bush.png">
+			<Col type="oval" xoff="0" yoff="0" w="60" h="52"/>
+		</Object>
+		<Object name="Bush" x="250" y="150" path="TinyAdventurePack/Other/Rock.png">
+			<Col type="oval" xoff="0" yoff="0" w="60" h="60"/>
+		</Object>
+		<Object name="Tree" x="450" y="250" path="TinyAdventurePack/Other/Tree/Tree.png">
+			<Col type="capsule" xoff="0" yoff="76" w="72" h="64"/>
+		</Object>
+		<Object name="Sign" x="320" y="160" path="TinyAdventurePack/Other/sign.png" scale="2">
+			<Col type="box" xoff="0" yoff="0" w="32" h="32"/>
+		</Object>
+		<Object name="Death" x="320" y="100" path="TinyAdventurePack/Other/Heart.png" scale="6">
+			<Col type="box" xoff="0" yoff="0" w="64" h="32"/>
+		</Object>
+	</Objects>
+
+	<Enemies>
+		<Enemy name="Skel" x="32" y="384" path="TinyAdventurePack/Skeleton/Idle/Char_idle_down.png">
+			<Col type="box" xoff="0" yoff="-10" w="64" h="64"/>
+			<AI>
+				<State name="Idle">
+					<Action type="Idle"/>
+					<Decision decide="player_in_range" distance="180"
+							  trueState="Chase" falseState="Idle"/>
+				</State>
+				<State name="Chase">
+					<Action type="Chase" speed="150"/>
+					<Decision decide="closest_target"/>
+					<Decision decide="player_in_range" distance="220"
+							  trueState="Chase" falseState="Idle"/>
+				</State>
+			</AI>
+		</Enemy>
+		<Enemy name="Skel" x="576" y="416" path="TinyAdventurePack/Skeleton/Idle/Char_idle_down.png"
+			   hp="20">
+			<Col type="box" xoff="0" yoff="-10" w="64" h="64"/>
+			<AI>
+				<State name="Idle">
+					<Action type="Idle"/>
+					<Decision decide="player_in_range" distance="240"
+							  trueState="Chase" falseState="Idle"/>
+				</State>
+				<State name="Chase">
+					<Action type="Chase" speed="50"/>
+					<Decision decide="closest_target"/>
+					<Decision decide="player_in_range" distance="280"
+							  trueState="Chase" falseState="Idle"/>
+				</State>
+			</AI>
+		</Enemy>
+	</Enemies>
+</World>

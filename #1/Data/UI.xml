@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+
+<UI>
+
+	<Group name="player_hp_1">
+		<Image x="0" y="0" width="160" height="80" justify="right" path="TinyAdventurePack/UI/Gray.png">
+			<Anchor x="1" y="0"/>
+		</Image>
+		<Text x="-8" y="10" width="96" height="32" justify="right">
+			<Anchor x="1" y="0"/>
+			<Font text="Player" size="32" color="0,0,0" justify="center" vjustify="center"/>
+		</Text>
+		<Image x="-100" y="40" width="60" height="50" justify="right" vjustify="center" id="player_now_1">
+			<Anchor x="1" y="0"/>
+		</Image>
+		<Image x="-72" y="60" width="32" height="32" justify="right" vjustify="center" path="TinyAdventurePack/UI/Heart.png" id="hp1_1">
+			<Anchor x="1" y="0"/>
+		</Image>
+		<Image x="-40" y="60" width="32" height="32" justify="right" vjustify="center" path="TinyAdventurePack/UI/Heart.png" id="hp2_1">
+			<Anchor x="1" y="0"/>
+		</Image>
+		<Image x="-8" y="60" width="32" height="32" justify="right" vjustify="center" path="TinyAdventurePack/UI/Heart.png" id="hp3_1">
+			<Anchor x="1" y="0"/>
+		</Image>
+	</Group>
+	
+	<Group name="player_hp_2">
+		<Image x="0" y="80" width="160" height="80" justify="right" path="TinyAdventurePack/UI/Gray.png">
+			<Anchor x="1" y="0"/>
+		</Image>
+		<Text x="-8" y="90" width="96" height="32" justify="right">
+			<Anchor x="1" y="0"/>
+			<Font text="Player" size="32" color="0,0,0" justify="center" vjustify="center"/>
+		</Text>
+		<Image x="-100" y="120" width="60" height="50" justify="right" vjustify="center" id="player_now_2">
+			<Anchor x="1" y="0"/>
+		</Image>
+		<Image x="-72" y="140" width="32" height="32" justify="right" vjustify="center" path="TinyAdventurePack/UI/Heart.png" id="hp1_2">
+			<Anchor x="1" y="0"/>
+		</Image>
+		<Image x="-40" y="140" width="32" height="32" justify="right" vjustify="center" path="TinyAdventurePack/UI/Heart.png" id="hp2_2">
+			<Anchor x="1" y="0"/>
+		</Image>
+		<Image x="-8" y="140" width="32" height="32" justify="right" vjustify="center" path="TinyAdventurePack/UI/Heart.png" id="hp3_2">
+			<Anchor x="1" y="0"/>
+		</Image>
+	</Group>
+	
+	<Group name="enemy1_hp">
+		<Image x="0" y="0" width="160" height="40" path="TinyAdventurePack/UI/Gray.png">
+			<Anchor x="0" y="0"/>
+		</Image>
+		<Image x="10" y="20" width="32" height="32" vjustify="center">
+			<Anchor x="0" y="0"/>
+		</Image>
+		<Image x="55" y="20" width="100" height="15" vjustify="center" path="TinyAdventurePack/UI/PaleRed.png">
+			<Anchor x="0" y="0"/>
+		</Image>
+		<Image x="55" y="20" width="100" height="15" vjustify="center" path="TinyAdventurePack/UI/Red.png">
+			<Anchor x="0" y="0"/>
+		</Image>
+	</Group>
+	
+	<Group name="enemy2_hp">
+		<Image x="0" y="40" width="160" height="40" path="TinyAdventurePack/UI/Gray.png">
+			<Anchor x="0" y="0"/>
+		</Image>
+		<Image x="10" y="60" width="32" height="32" vjustify="center">
+			<Anchor x="0" y="0"/>
+		</Image>
+		<Image x="55" y="60" width="100" height="15" vjustify="center" path="TinyAdventurePack/UI/PaleRed.png">
+			<Anchor x="0" y="0"/>
+		</Image>
+		<Image x="55" y="60" width="100" height="15" vjustify="center" path="TinyAdventurePack/UI/Red.png">
+			<Anchor x="0" y="0"/>
+		</Image>
+	</Group>
+	
+	<Group name="enemy3_hp">
+		<Image x="0" y="80" width="160" height="40" path="TinyAdventurePack/UI/Gray.png">
+			<Anchor x="0" y="0"/>
+		</Image>
+		<Image x="10" y="100" width="32" height="32" vjustify="center">
+			<Anchor x="0" y="0"/>
+		</Image>
+		<Image x="55" y="100" width="100" height="15" vjustify="center" path="TinyAdventurePack/UI/PaleRed.png">
+			<Anchor x="0" y="0"/>
+		</Image>
+		<Image x="55" y="100" width="100" height="15" vjustify="center" path="TinyAdventurePack/UI/Red.png">
+			<Anchor x="0" y="0"/>
+		</Image>
+	</Group>
+
+	<Group name="menu">
+		
+		<Button x="0" y="0"
+				width="64" height="32"
+				justify="center" vjustify="center"
+				path="TinyAdventurePack/UI/border.png"
+				id="start_game"
+				visible="True">
+			<Anchor x="0.5" y="0.5"/>
+			<Font text="Start" size="16" justify="center" vjustify="center"/>
+			<Action onClick="LoadingSaves" pressed="TinyAdventurePack/UI/pressed.png"/>
+		</Button>
+
+		<Button x="-40" y="40"
+				width="48" height="24"
+				justify="center" vjustify="center"
+				path="TinyAdventurePack/UI/border.png"
+				id="volume_up"
+				visible="True">
+			<Anchor x="0.5" y="0.5"/>
+			<Font text="Vol +" size="16" justify="center" vjustify="center"/>
+			<Action onClick="VolUp" pressed ="TinyAdventurePack/UI/pressed.png"/>
+		</Button>
+
+		<Button x="40" y="40"
+				width="48" height="24"
+				justify="center" vjustify="center"
+				path="TinyAdventurePack/UI/border.png"
+				id="volume_down"
+				visible="True">
+			<Anchor x="0.5" y="0.5"/>
+			<Font text="Vol -" size="16" justify="center" vjustify="center"/>
+			<Action onClick="VolDown" pressed ="TinyAdventurePack/UI/pressed.png"/>
+		</Button>
+
+		<Text x="0" y="0"
+			  width="320" height="64"
+			  justify="center" vjustify="center"
+			  id="menutxt_status">
+			<Anchor x="0.5" y="0.5"/>
+			<Font text="Loading..." size="64" justify="center" vjustify="center"/>
+		</Text>
+
+		<Text x="0" y="0"
+			  width="320" height="64"
+			  justify="center" vjustify="center"
+			  id="menutxt_choose">
+			<Anchor x="0.5" y="0.25"/>
+			<Font text="Choose One" size="64" color="0,64,0" justify="center" vjustify="center"/>
+		</Text>
+
+		<Button x="0" y="0"
+				width="320" height="64"
+				justify="center" vjustify="center"
+				path="TinyAdventurePack/UI/border.png"
+				id="save1">
+			<Anchor x="0.5" y="0.45"/>
+			<Font text="New World" size="48" justify="center" vjustify="center"/>
+			<Action onClick="StartingGame" args="0" pressed="TinyAdventurePack/UI/pressed.png"/>
+		</Button>
+
+		<Button x="0" y="0"
+				width="320" height="64"
+				justify="center" vjustify="center"
+				path="TinyAdventurePack/UI/border.png"
+				id="save2">
+			<Anchor x="0.5" y="0.6"/>
+			<Font text="New World" size="48" justify="center" vjustify="center"/>
+			<Action onClick="StartingGame" args="1" pressed="TinyAdventurePack/UI/pressed.png"/>
+		</Button>
+
+		<Button x="0" y="0"
+				width="320" height="64"
+				justify="center" vjustify="center"
+				path="TinyAdventurePack/UI/border.png"
+				id="save3">
+			<Anchor x="0.5" y="0.75"/>
+			<Font text="New World" size="48" justify="center" vjustify="center"/>
+			<Action onClick="StartingGame" args="2" pressed="TinyAdventurePack/UI/pressed.png"/>
+		</Button>
+		
+	</Group>
+
+</UI>
